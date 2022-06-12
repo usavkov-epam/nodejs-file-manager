@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-file-manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": "https://github.com/usavkov-epam/nodejs-file-manager.git",
+  "author": "Yury Saukou <yury_saukou@epam.com>",
+  "license": "MIT"
+}
