@@ -1,15 +1,25 @@
 import { parseArgs } from './parseArgs.js';
 
 import {
-  cd,
-  ls,
-  up,
-} from '../commands/nwd/index.js';
+  add,
+  cat,
+  cp,
+  mv,
+  rm,
+  rn,
+} from '../commands/files/index.js';
+import { cd, ls, up } from '../commands/nwd/index.js';
 import { VALIDATION_ERROR } from '../consants.js';
 
 const commadsMap = {
+  add,
+  cat,
   cd,
+  cp,
   ls,
+  mv,
+  rm,
+  rn,
   up,
 }
 
