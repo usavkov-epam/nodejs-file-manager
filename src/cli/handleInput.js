@@ -11,6 +11,7 @@ import {
 import { hash } from '../commands/hash/index.js';
 import { cd, ls, up } from '../commands/nwd/index.js';
 import { os } from '../commands/os/index.js';
+import { compress, decompress } from '../commands/zip/index.js';
 
 import { VALIDATION_ERROR } from '../consants.js';
 
@@ -18,7 +19,9 @@ const commadsMap = {
   add,
   cat,
   cd,
+  compress,
   cp,
+  decompress,
   hash,
   ls,
   os,
