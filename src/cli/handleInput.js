@@ -16,6 +16,7 @@ import { compress, decompress } from '../commands/zip/index.js';
 import { VALIDATION_ERROR } from '../consants.js';
 
 const commadsMap = {
+  '.exit': () => process.exit(0),
   add,
   cat,
   cd,

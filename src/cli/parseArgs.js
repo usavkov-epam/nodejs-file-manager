@@ -1,4 +1,5 @@
 const awailableCommands = [
+  '.exit',
   'add',
   'cat',
   'cd',
