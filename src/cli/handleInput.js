@@ -9,6 +9,8 @@ import {
   rn,
 } from '../commands/files/index.js';
 import { cd, ls, up } from '../commands/nwd/index.js';
+import { os } from '../commands/os/index.js';
+
 import { VALIDATION_ERROR } from '../consants.js';
 
 const commadsMap = {
@@ -17,6 +19,7 @@ const commadsMap = {
   cd,
   cp,
   ls,
+  os,
   mv,
   rm,
   rn,
