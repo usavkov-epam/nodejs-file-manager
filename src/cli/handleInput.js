@@ -8,6 +8,7 @@ import {
   rm,
   rn,
 } from '../commands/files/index.js';
+import { hash } from '../commands/hash/index.js';
 import { cd, ls, up } from '../commands/nwd/index.js';
 import { os } from '../commands/os/index.js';
 
@@ -18,6 +19,7 @@ const commadsMap = {
   cat,
   cd,
   cp,
+  hash,
   ls,
   os,
   mv,
