@@ -20,5 +20,9 @@ export const cp = async (filePath, dirPath) => {
   const read$ = createReadStream(src);
   const write$ = createWriteStream(dest, { flags: 'wx' });
 
-  return pipeline(read$, write$).catch(() => { throw new Error(OPERATION_ERROR) });
+  return pipeline(read$, write$)
+    .then(
+      res => res,
+      () => { throw new Error(OPERATION_ERROR) },
+    );
 };

@@ -22,6 +22,8 @@ export const mv = async (filePath, dirPath) => {
   const write$ = createWriteStream(dest, { flags: 'wx' });
 
   return pipeline(read$, write$)
-    .then(() => rm(src))
-    .catch(() => { throw new Error(OPERATION_ERROR) });
+    .then(
+      () => rm(src).catch(() => { throw new Error(OPERATION_ERROR) }),
+      () => { throw new Error(OPERATION_ERROR) }
+    )
 };
