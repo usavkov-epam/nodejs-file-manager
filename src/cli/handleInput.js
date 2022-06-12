@@ -36,7 +36,5 @@ export const handleInput = async (input) => {
 
   if (!command) return process.stderr.write(`${VALIDATION_ERROR}\n`);
 
-  console.log('args', args);
-
   commadsMap[command](...args).catch((err) => process.stderr.write(`${err?.message || err}\n`));
 };
