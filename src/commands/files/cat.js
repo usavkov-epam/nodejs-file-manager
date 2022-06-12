@@ -3,14 +3,11 @@ import { resolve } from 'path';
 import { pipeline } from 'stream/promises';
 
 import { OPERATION_ERROR, VALIDATION_ERROR } from '../../consants.js';
-import { getDirname } from '../../utils.js';
-
-const __dirname = getDirname(import.meta.url);
 
 export const cat = async (file) => {
   if (!file) throw new Error(VALIDATION_ERROR);
 
-  const filePath = resolve(__dirname, file);
+  const filePath = resolve(process.cwd(), file);
 
   const stream = createReadStream(filePath);
 
